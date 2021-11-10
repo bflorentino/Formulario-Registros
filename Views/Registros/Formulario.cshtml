@@ -1,0 +1,63 @@
+﻿@{
+    ViewBag.title = "Formulario de Registro de estudiantes";
+}
+
+<link href="/css/Formulario.css"  rel="stylesheet" />
+
+<div id="container">
+
+    <section id="ITLA-BANNER">
+
+        <img src="/itlalogo.png" alt="Alternate Text" />
+
+    </section>
+
+    <section id="Formulario-Registro">
+
+        <h2> Registro de Estudiantes</h2>
+
+        <form action="DatosGuardados" method="post" id="form" enctype="application/x-www-form-urlencoded">
+
+            <input type="text" name="matricula" placeholder="Matricula" required class="input-text" />
+            <input type="text" name="nombre" placeholder="Nombre" required class="input-text" />
+            <input type="text" name="apellidos" placeholder="Apellidos" required class="input-text" />
+            <input type="text" name="fechaNacimiento" placeholder="Fecha de nacimiento" required class="input-text" onfocus="(this.type='date')" onblur="(this.type='text')"/>
+
+            <select name="carrera" value="Carrera" required class="input-text">
+
+                <option value="">Carrera</option>
+                <option value="Desarrollo de software">Desarrollo de Software</option>
+                <option value="Redes de la informacion">Redes de la información</option>
+                <option value="Seguridad Informática">Seguridad Informática</option>
+                <option value="Mecatrónica">Mecatrónica</option>
+                <option value="Multimedia">Multimedia</option>
+                <option value="Inteligencia Artificial">Inteligencia Artificial</option>
+                <option value="Ciencia de Datos">Ciencia de Datos</option>
+                <option value="Manufactura">Manufactura</option>
+                <option value="Sonido">Sonido</option>
+                <option value="Desarrollo de videojuegos">Desarrollo de videojuegos</option>
+                <option value="Tecnlogias Renovbles">Tecnologias Renovables</option>
+                <option value="Informática Forense">Informática Forense</option>
+
+            </select>
+
+            <input type="text" name="direccion" placeholder="Direccion" required  class="input-text"/>
+            <input type="text" name="Telefono" placeholder="Numero de telefono" required class="input-text" />
+            <input type="email" name="Correo" placeholder="Correo Electrónico" required class="input-text" />
+
+            <label class="titulo"> Formato en que se guardará el registro</label>
+            <br />
+            <input type="radio" name="formato" value="JSON" />
+            <label class="opcion">JSON</label>
+            <input type="radio" name="formato" value="TXT" />
+            <label class="opcion">TXT</label>
+            <input type="radio" name="formato" value="EXCEL" />
+            <label class="opcion">EXCEL</label>
+            <br />
+
+            <input type="submit" name="Registrarse" value="Registrarse"/>
+
+        </form>
+    </section>
+
+</div>

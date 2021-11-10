@@ -1,0 +1,76 @@
+﻿@model IEnumerable<Formulario_de_Registro.Models.Estudiante>
+
+@{
+    ViewData["Title"] = "MostrarDatosDeTXT";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="/css/Tablas.css" rel="stylesheet" />
+
+<h1 style="margin:30px 0px;">Estudiantes registrados en el TXT</h1>
+
+<a href="/Estudiantes.txt" download="Archivo de estudiantes"  style="margin: 25px 0px; font-size: 18px; text-decoration: none ">Presione para descargar Archivo TXT</a>
+
+<div class="table-container" style="margin-top: 40px;">
+<table>
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Matricula)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Apellidos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaNacimiento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Carrera)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Direccion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Telefono)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EMail)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Matricula)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Apellidos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaNacimiento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Carrera)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Direccion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telefono)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EMail)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</div>
